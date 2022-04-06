@@ -34,6 +34,20 @@ protected function computeAverageGrade($grade1, $grade2)
     return round($average, 2);
 }
 
+protected function Remarks($average)
+{
+    $remarks = "null";
+    if($average>=75){
+        $remarks = "PASSED";
+        return $remarks;
+    }
+    else{
+        $remarks ="FAILED";
+        return $remarks;
+    }
+}
+
+
 public function computeGrades(Request $request)
 {
     $student_1 = $request->student_1;
@@ -87,19 +101,6 @@ public function computeGrades(Request $request)
         's5_remarks' => $s5_remarks,
         
     ]);
-}
-
-protected function Remarks($average)
-{
-    $remarks = "null";
-    if($average>=75){
-        $remarks = "PASSED";
-        return $remarks;
-    }
-    else{
-        $remarks ="FAILED";
-        return $remarks;
-    }
 }
 
 }
