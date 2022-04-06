@@ -15,13 +15,13 @@
 
     <form action="/enter-grades" method="POST">
         @csrf
-        @for ($i =1; $i<=5; $i++)
+        @for ($i =1; $i <=5; $i++)
     <div class="row">
         <label> Student {{ $i }} Name: </label>
         <input type="text" name="name_{{ $i }}" class="form-control">
 </div>
 @endfor
-<hr />
+<hr>
 <div class="row">
     <button class="btn btn-primary btn-lg>"> Save Students </button>
 </div>
