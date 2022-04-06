@@ -71,20 +71,20 @@ public function computeGrades(Request $request)
         's2_agrade' => $s2_agrade,
         's2_remarks' => $s2_remarks,
         // Student 3 enter grades
-        's1_mgrade' => $request->s3_mgrade,
-        's1_fgrade' => $request->s3_fgrade,
-        's1_agrade' => $s3_agrade,
-        's1_remarks' => $s3_remarks,
+        's3_mgrade' => $request->s3_mgrade,
+        's3_fgrade' => $request->s3_fgrade,
+        's3_agrade' => $s3_agrade,
+        's3_remarks' => $s3_remarks,
         // Student 4 enter grades
-        's1_mgrade' => $request->s4_mgrade,
-        's1_fgrade' => $request->s4_fgrade,
-        's1_agrade' => $s4_agrade,
-        's1_remarks' => $s4_remarks,
+        's4_mgrade' => $request->s4_mgrade,
+        's4_fgrade' => $request->s4_fgrade,
+        's4_agrade' => $s4_agrade,
+        's4_remarks' => $s4_remarks,
         // Student 5 enter grades
-        's1_mgrade' => $request->s5_mgrade,
-        's1_fgrade' => $request->s5_fgrade,
-        's1_agrade' => $s5_agrade,
-        's1_remarks' => $s5_remarks,
+        's5_mgrade' => $request->s5_mgrade,
+        's5_fgrade' => $request->s5_fgrade,
+        's5_agrade' => $s5_agrade,
+        's5_remarks' => $s5_remarks,
         
     ]);
 }
