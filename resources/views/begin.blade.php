@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
+<html>
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- CSS only -->
@@ -14,9 +15,9 @@
     <h1> Enter the name of the students </h1>
 
     <form action="/enter-grades" method="POST">
-        @csrf
-        @for ($i =1; $i <=5; $i++)
-    <div class="row">
+    @csrf
+    @for ($i =1; $i <=5; $i++)
+      <div class="row">
         <label> Student {{ $i }} Name: </label>
         <input type="text" name="name_{{ $i }}" class="form-control">
 </div>

@@ -13,11 +13,11 @@ class GradesController extends Controller
 
     public function enterGrades(Request $request)
      {
-    $student_1 = $request->name_1;
-    $student_2 = $request->name_2;
-    $student_3 = $request->name_3;
-    $student_4 = $request->name_4;
-    $student_5 = $request->name_5;
+       $student_1 = $request->name_1;
+       $student_2 = $request->name_2;
+       $student_3 = $request->name_3;
+       $student_4 = $request->name_4;
+       $student_5 = $request->name_5;
 
     return view('enter-grades', [
         'student_1' => $student_1,
@@ -28,9 +28,9 @@ class GradesController extends Controller
     ]);
 }
 
-protected function computeAverageGrade($grade1, $grade2)
+protected function computeAverageGrade($mgrade, $fgrade)
 {
-    $average = ($grade1 + $grade2) / 2;
+    $average = ($mgrade + $fgrade) / 2;
     return round($average, 2);
 }
 
