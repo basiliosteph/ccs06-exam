@@ -14,7 +14,7 @@
     <div class="container-sm">
     <h1> Enter the name of the students </h1>
 
-    <form action="/enter-grades" method="POST">
+    <form action="/enter-grades" class="uniqueNames" method="POST">
     @csrf
     @for ($i =1; $i <=5; $i++)
       <div class="row">
@@ -28,6 +28,32 @@
 </div>
 </form>
 </div>
+
+<script type="text/javascript">
+    var frm = document.querySelector('form.uniqueNames');
+    var inputs = frm.querySelectorAll('input[type=text]');
+    frm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var classArr = [];
+        for(var i = 0; i < inputs.length; i++) 
+        {
+            if(classArr.indexOf(inputs[i].value) != -1) {
+                        inputs[i].style.color = "#A93226";
+                        alert("You have entered a same student name, kindly enter a unique one.");
+                        return false;
+            }
+            else
+            classArr.push(inputs[i].value);
+        }
+        frm.submit();
+    });
+    for(var j = 0; j < inputs.length; j++) {
+        inputs[j].addEventListener('focus', function() {
+            this.style.backgroundColor = "#FDFEFE";
+            this.style.color = "#2471A3";
+        });
+    }
+    </script>
 
 <!-- JavaScript Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
